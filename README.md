@@ -28,4 +28,9 @@ Database: MySQL (via phpMyAdmin in XAMPP)
 
 Server: Apache (XAMPP stack)
 
+
 PS: No online deployment yet due to the use of a local XAMPP setup and local MySQL database. For now, this project runs perfectly in a local environment.
+![316526960_pexels-edgar-daniel-hernández-cervantes-3628100](https://github.com/user-attachments/assets/94faf9f1-410a-4e88-bda5-cf95d347f6bf)
+
+
+
