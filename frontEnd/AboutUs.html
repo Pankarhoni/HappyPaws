@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    @font-face {
+      font-family: 'Catchy Mager Regular';
+      src: url('path/to/font/Catchy_Mager_Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background-image: url('./img/aboutuspic.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white; 
+    }
+
+    nav {
+      background-color:transparent;
+      color:white;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: right;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .container {
+      font-family: 'Catchy Mager Regular', sans-serif;
+      background-color: rgba(238, 238, 238, 0.8); /* Adjusted background color for better contrast */
+      color: rgb(0, 0, 0); /* Set font color in the container to white */
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .container h1 {
+      text-align: center;
+      color: rgb(0, 0, 0);
+    }
+
+    .container p {
+      text-align: justify;
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    .logo {
+      float: left;
+      display: flex;
+      align-items: center;
+      color: white;
+      margin-left: 2%;
+    }
+
+    .logo img {
+      width: 60px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+  </style>
+  <title>About Us</title>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo">
+      <b>HappyPaws</b>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Home.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adoptpage.php" onclick="checkUserLoggedIn()"  >Adopt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AboutUs.html">About</a>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- About Us Container -->
+  <div class="container">
+    <h1>ABOUT US</h1>
+    <p>
+    Welcome to HappyPaws, where our love for animals has ignited a passion to make a difference in their lives. Founded on the belief that every creature deserves a second chance at a happy life, we are dedicated to creating a haven for pets in need.
+
+    <br>Our journey began with a simple yet profound love for animals. The founders of HappyPaws shared a common vision: to provide a safe and nurturing environment for those often forgotten or abandoned. This vision transformed into a mission to give every furry friend the opportunity to be cherished, to feel the warmth of a loving home, and to experience the joy of companionship.
+    <br>
+    <br>At the heart of our shelter is the unwavering commitment to the well-being of animals. We understand that circumstances can be challenging, and sometimes pets find themselves without a home through no fault of their own. Whether rescued from neglect, abandonment, or simply in need of a new home, every animal that enters our shelter is met with compassion, care, and a promise of a brighter future.
+    <br>
+    <br>Our website serves as a bridge between these wonderful animals and potential adopters, connecting hearts and homes. We believe in the transformative power of love and the incredible bond that forms between humans and their animal companions. That's why we are devoted to matching each pet with the perfect family, ensuring that the connection is built on mutual happiness and understanding.
+    <br>
+    <br>HappyPaws is not just a place for adoptions; it's a community built on shared values of kindness, responsibility, and the belief that every animal has the capacity to bring joy and fulfillment to a home. As you explore our website, you'll discover heartwarming stories of second chances, tales of resilience, and opportunities to make a difference in the lives of these deserving animals.
+    <br>
+    <br>Join us in our mission to provide a loving home for every pet in need. Together, let's rewrite the stories of those who have faced adversity, giving them the chance to live a life filled with love, laughter, and companionship. Thank you for being a part of the HappyPaws family and for embracing the idea that every animal deserves a second chance.
+<br>
+<br>
+With love,<br>
+The HappyPaws Team
+    </p>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (required for Bootstrap components to work) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

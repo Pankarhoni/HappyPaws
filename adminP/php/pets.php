@@ -1,0 +1,89 @@
+<?php
+require('top.inc.php');
+
+if(isset($_GET['type']) && $_GET['type']!=''){
+	$type=get_safe_value($con,$_GET['type']);
+	if($type=='status'){
+		$operation=get_safe_value($con,$_GET['operation']);
+		$id=get_safe_value($con,$_GET['id']);
+		if($operation=='active'){
+			$status='1';
+		}else{
+			$status='0';
+		}
+		$update_status_sql="update pet set status='$status' where id='$id'";
+		mysqli_query($con,$update_status_sql);
+	}
+	
+	if($type=='delete'){
+		$id=get_safe_value($con,$_GET['id']);
+		$delete_sql="delete from pet where id='$id'";
+		mysqli_query($con,$delete_sql);
+	}
+}
+
+$sql="select pet.*,categories.categories from pet,categories where pet.categories_id=categories.id order by pet.id desc";
+$res=mysqli_query($con,$sql);
+?>
+<div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12"> <!--fixed size for the card-->
+                    <div class="card">
+                                <div class="card-body">
+                                   <h4 class="box-title">PETS </h4>
+                                   <button type="button" class="btn btn-outline-primary"><a href="manage_pet.php">Add Pets</a> </h4>
+                                </div>
+                            <div class="card-body--">
+                                <div class="table-stats order-table ov-h">
+                                    <table class="table ">
+                                         <thead class="tb">
+                                            <tr>
+                                            <th class="serial">#</th>
+							                 <th>ID</th>
+							                 <th>Name</th>
+							                 <th>Breed</th>
+							                 <th>Gender</th>
+							                 <th>Vaccination status</th>
+							                 <th>Age</th>
+							                 <th>About</th>
+							                 <th>Image</th>
+							                 <th>Status</th>
+                                            </tr>
+                                         </thead>
+                                         <tbody>
+                                         <?php 
+							$i=1;
+							while($row=mysqli_fetch_assoc($res)){?>
+							<tr>
+							   <td class="serial"><?php echo $i?></td>
+							   <td><?php echo $row['id']?></td>
+							   <td><?php echo $row['name']?></td>
+							   <td><?php echo $row['breed']?></td>
+							   <td><?php echo $row['gender']?></td>
+							   <td><?php echo $row['vaccination']?></td>
+							   <td><?php echo $row['age']?></td>
+							   <td><?php echo $row['about']?></td>
+							   <td><img src="<?php echo PET_IMAGE_SITE_PATH.$row['image']?>"/></td>
+
+							   <td>
+								
+								<?php
+								
+								echo "<span class='badge badge-edit'><a href='manage_pet.php?id=".$row['id']."'>Edit</a></span>&nbsp;";
+								
+								echo "<span class='badge badge-delete'><a href='?type=delete&id=".$row['id']."'>Delete</a></span>";
+								
+								?>
+                                            </td>
+                                        </tr>
+                                        <?php $i++; } ?>
+                                         </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
