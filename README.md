@@ -11,7 +11,7 @@ Welcome to Happy Paws! A heartwarming platform where users can browse, view, and
 
 - 🏡 All hosted locally via XAMPP localhost for now
 
-**-  💡 What You Can Do: **
+**💡 What You Can Do:**
 - Browse a curated list of pets available for adoption
 
 -  View individual pet profiles with details like age, breed
@@ -19,13 +19,13 @@ Welcome to Happy Paws! A heartwarming platform where users can browse, view, and
 - Easy-to-navigate UI inspired by real-world adoption platforms
 
 #### 🔧 Tech Stack: 
-- ** Frontend: **HTML5, CSS3, Bootstrap 5
+- **Frontend:** HTML5, CSS3, Bootstrap 5
 
 -  **Backend:** PHP 8
 
 -  **Database:** MySQL (via phpMyAdmin in XAMPP)
 
-- ** Server**: Apache (XAMPP stack)
+- **Server**: Apache (XAMPP stack)
 
 > PS: No online deployment yet due to the use of a local XAMPP setup and local MySQL database. For now, this project runs perfectly in a local environment.
 
